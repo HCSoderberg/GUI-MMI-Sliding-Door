@@ -10,11 +10,12 @@ class ChangespeedFrame(customtkinter.CTkFrame):
 
         
         font = customtkinter.CTkFont(family="ADLaM Display",size=35,weight="bold")
+        smallfont2 = customtkinter.CTkFont(family="ADLaM Display",size=20,weight="bold")
         smallfont =customtkinter.CTkFont(family="Helvetica",size=15,weight="bold")
         errorfont = customtkinter.CTkFont(family="Helvetica",size=25,weight="bold")
 
         # OPENING
-        opening_speed_text = tkinter.StringVar(value="OPENING SPEED")
+        opening_speed_text = tkinter.StringVar(value="Opening speed")
         self.opening_speed_label = customtkinter.CTkLabel(self, textvariable= opening_speed_text, width=160, height= 25, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=font)
         self.opening_speed_label.place(relx=0.5, rely=0.2, anchor=tkinter.CENTER)
 
@@ -22,28 +23,31 @@ class ChangespeedFrame(customtkinter.CTkFrame):
         self.opening_speed_slider.place(relx=0.5, rely= 0.3, anchor=tkinter.CENTER)
         
 
-        value_20_text = tkinter.StringVar(value="20")
+        value_20_text = tkinter.StringVar(value="200")
         self.value_20_open_label = customtkinter.CTkLabel(self,textvariable= value_20_text, width=40,height=20, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont)
         self.value_20_open_label.place(relx=0.1, rely=0.35, anchor=tkinter.CENTER)
 
-        value_30_text = tkinter.StringVar(value="30")
+        value_30_text = tkinter.StringVar(value="300")
         self.value_30_open_label = customtkinter.CTkLabel(self,textvariable= value_30_text, width=40,height=20, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont)
         self.value_30_open_label.place(relx=0.3, rely=0.35, anchor=tkinter.CENTER)
 
-        value_40_text = tkinter.StringVar(value="40")
+        value_40_text = tkinter.StringVar(value="400")
         self.value_40_open_label = customtkinter.CTkLabel(self,textvariable= value_40_text, width=40,height=20, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont)
         self.value_40_open_label.place(relx=0.5, rely=0.35, anchor=tkinter.CENTER)
 
-        value_50_text = tkinter.StringVar(value="50")
+        value_50_text = tkinter.StringVar(value="500")
         self.value_50_open_label = customtkinter.CTkLabel(self,textvariable= value_50_text, width=40,height=20, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont)
         self.value_50_open_label.place(relx=0.7, rely=0.35, anchor=tkinter.CENTER)
 
-        value_60_text = tkinter.StringVar(value="60")
+        value_60_text = tkinter.StringVar(value="600")
         self.value_60_open_label = customtkinter.CTkLabel(self,textvariable= value_60_text, width=40,height=20, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont)
-        self.value_60_open_label.place(relx=0.9, rely=0.35, anchor=tkinter.CENTER)  
+        self.value_60_open_label.place(relx=0.9, rely=0.35, anchor=tkinter.CENTER) 
 
+        unit_text = tkinter.StringVar(value="mm/s") 
+        self.unit_label = customtkinter.CTkLabel(self,textvariable=unit_text, width=40, height=20,fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont2)
+        self.unit_label.place(relx=0.5, rely=0.38, anchor=tkinter.CENTER)
         # CLOSING
-        closing_speed_text = tkinter.StringVar(value="CLOSING SPEED")
+        closing_speed_text = tkinter.StringVar(value="Closing speed")
         self.closing_speed_label = customtkinter.CTkLabel(self, textvariable= closing_speed_text, width=160, height= 25, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=font)
         self.closing_speed_label.place(relx=0.5, rely=0.45, anchor=tkinter.CENTER)
 
@@ -65,6 +69,9 @@ class ChangespeedFrame(customtkinter.CTkFrame):
 
         self.value_60_close_label = customtkinter.CTkLabel(self,textvariable= value_60_text, width=40,height=20, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont)
         self.value_60_close_label.place(relx=0.9, rely=0.60, anchor=tkinter.CENTER)
+
+        self.unit2_label = customtkinter.CTkLabel(self,textvariable=unit_text, width=40, height=20,fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont2)
+        self.unit2_label.place(relx=0.5, rely=0.63, anchor=tkinter.CENTER )
 
         image = Image.open("./images/confirm.png")
         image = customtkinter.CTkImage(image, size=image.size)

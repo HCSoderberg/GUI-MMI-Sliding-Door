@@ -26,9 +26,9 @@ class PublishHandler(threading.Thread):
             rc = self.client.loop()
             time.sleep(5)
                 # USED TO ASK FOR FOR ERROR AND OPERATING MODE
-            #self.publish('c/testdevice/slidingDoor/ErIn', '')
-            #self.publish('c/testdevice/slidingDoor/OpMo','')
+            self.publish('c/testdevice/slidingDoor/ErIn', '')
+            self.publish('c/testdevice/slidingDoor/OpMo','')
                 # USED TO SIMULATE INCOMING ERRORS FROM DOOR
-            self.publish('e/testdevice/slidingDoor/ErIn_v2', '{"id":[1,2]}')
+            #self.publish('e/testdevice/slidingDoor/ErIn_v2', '{"id":[1,2]}')
             
             

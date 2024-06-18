@@ -11,8 +11,9 @@ class ChangeholdopentimeFrame(customtkinter.CTkFrame):
         font = customtkinter.CTkFont(family="ADLaM Display",size=35,weight="bold")
         errorfont = customtkinter.CTkFont(family="Helvetica",size=25,weight="bold")
         smallfont =customtkinter.CTkFont(family="Helvetica",size=15,weight="bold")
+        smallfont2 =customtkinter.CTkFont(family="Helvetica",size=20,weight="bold")
 
-        hold_open_time_text = tkinter.StringVar(value="HOLD OPEN TIME")
+        hold_open_time_text = tkinter.StringVar(value="Hold open time")
         self.hold_open_time_label = customtkinter.CTkLabel(self, textvariable= hold_open_time_text, width=160, height= 25, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=font)
         self.hold_open_time_label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
 
@@ -39,6 +40,10 @@ class ChangeholdopentimeFrame(customtkinter.CTkFrame):
         text_8 = tkinter.StringVar(value="8")
         self.value_8_label = customtkinter.CTkLabel(self,textvariable= text_8, width=40,height=20, fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont)
         self.value_8_label.place(relx=0.9, rely=0.45, anchor=tkinter.CENTER)
+
+        unit_text = tkinter.StringVar(value="Seconds") 
+        self.unit_label = customtkinter.CTkLabel(self,textvariable=unit_text, width=40, height=20,fg_color=ColorTheme.background_color,text_color=(ColorTheme.text_color), font=smallfont2)
+        self.unit_label.place(relx=0.5, rely=0.48, anchor=tkinter.CENTER )
 
         image = Image.open("./images/confirm.png")
         image = customtkinter.CTkImage(image, size=image.size)
